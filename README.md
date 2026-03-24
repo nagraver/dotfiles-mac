@@ -11,7 +11,7 @@ xcode-select --install
 
 ```zsh
 # ...or use HTTPS and switch remotes later.
-git clone https://github.com/nagraver/dotfiles.git ~/.dotfiles
+git clone https://github.com/nagraver/dotfiles.git ~/dotfiles
 ```
 
 
@@ -20,12 +20,12 @@ git clone https://github.com/nagraver/dotfiles.git ~/.dotfiles
 ```zsh
 # There are better and less manual ways to do this;
 # investigate install scripts and bootstrapping tools.
-
-ln -s ~/.dotfiles/.zshrc ~/.zshrc
-ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/.dotfiles/ghostty ~/.confin/ghostty
-ln -s ~/.dotfiles/starship.toml ~/.config/starship.toml
-ln -s ~/.dotfiles/zed ~/.config/
+ln -s ~/dotfiles/.zshrc ~/.zshrc
+ln -s ~/dotfiles/starship.toml ~/.config/starship.toml
+ln -s ~/dotfiles/ghostty ~/.config/ghostty
+ln -s ~/dotfiles/zed ~/.config/
+ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/dotfiles/.vimrc ~/.vimrc
 ```
 
 
@@ -38,11 +38,11 @@ ln -s ~/.dotfiles/zed ~/.config/
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Then pass in the Brewfile location...
-brew bundle --file ~/.dotfiles/Brewfile
+brew bundle --file ~/dotfiles/Brewfile
 
 # Use this to update Brewfile
 brew bundle dump --describe --force
 
 # ...or move to the directory first.
-cd ~/.dotfiles && brew bundle
+cd ~/dotfiles && brew bundle
 ```
