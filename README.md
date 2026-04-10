@@ -16,19 +16,17 @@ git clone https://github.com/nagraver/dotfiles.git ~/dotfiles
 3. Create symlinks in the Home directory to the real files in the repo.
 
 ```zsh
-# There are better and less manual ways to do this;
-# investigate install scripts and bootstrapping tools.
+# Link configs
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/starship.toml ~/.config/starship.toml
 ln -s ~/dotfiles/ghostty ~/.config/ghostty
+ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/dotfiles/.vimrc ~/.vimrc
 
 # Zed has seperated links for better sync experience
 ln -s ~/dotfiles/zed/themes ~/.config/zed/themes
 ln -s ~/dotfiles/zed/settings.json ~/.config/zed/settings.json
 ln -s ~/dotfiles/zed/keymap.json ~/.config/zed/keymap.json
-
-ln -s ~/dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/dotfiles/.vimrc ~/.vimrc
 ```
 
 4. Install Homebrew, followed by the software listed in the Brewfile.
