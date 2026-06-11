@@ -1,48 +1,106 @@
-## Steps to bootstrap a new Mac
+# Dotfiles
 
-1. Install Apple's Command Line Tools, which are prerequisites for Git and Homebrew.
+Personal macOS dotfiles for zsh, Starship, Ghostty, Zed, Vim, and Homebrew.
+
+## What's Included
+
+- `.zshrc` - zsh setup with oh-my-zsh, `git` and `brew` plugins, Homebrew on `PATH`, zsh syntax highlighting, and Starship.
+- `starship.toml` - Starship prompt symbols and module styling.
+- `Brewfile` - Homebrew packages and GUI apps used on a new Mac.
+- `ghostty/` - Ghostty terminal config and themes.
+- `zed/` - Zed settings, keymap, and custom themes.
+- `.vimrc` - Vim config.
+
+## Bootstrap a New Mac
+
+1. Install Apple's Command Line Tools. They are required for Git and Homebrew.
 
 ```zsh
 xcode-select --install
 ```
 
-2. Clone repo into new hidden directory.
+2. Install Homebrew.
 
 ```zsh
-# ...or use HTTPS and switch remotes later.
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+3. Clone this repository.
+
+```zsh
 git clone https://github.com/nagraver/dotfiles.git ~/dotfiles
 ```
 
-3. Create symlinks in the Home directory to the real files in the repo.
+4. Install packages from the Brewfile.
 
 ```zsh
-# Link configs
-ln -s ~/dotfiles/.zshrc ~/.zshrc
-ln -s ~/dotfiles/starship.toml ~/.config/starship.toml
-ln -s ~/dotfiles/ghostty ~/.config/ghostty
-ln -s ~/dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/dotfiles/.vimrc ~/.vimrc
-
-# Zed has seperated links for better sync experience
-ln -s ~/dotfiles/zed/themes ~/.config/zed/themes
-ln -s ~/dotfiles/zed/settings.json ~/.config/zed/settings.json
-ln -s ~/dotfiles/zed/keymap.json ~/.config/zed/keymap.json
+brew bundle --file ~/dotfiles/Brewfile
 ```
 
-4. Install Homebrew, followed by the software listed in the Brewfile.
+5. Install oh-my-zsh if it is not already installed.
 
 ```zsh
-# These could also be in an install script.
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
 
-# Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+6. Link configs into the expected locations.
 
-# Then pass in the Brewfile location...
-brew bundle --file ~/dotfiles/Brewfile
+Back up or remove existing files first if these paths already exist.
 
-# Use this to update Brewfile
-brew bundle dump --describe --force
+```zsh
+mkdir -p ~/.config ~/.config/zed
 
-# ...or move to the directory first.
-cd ~/dotfiles && brew bundle
+ln -sfn ~/dotfiles/.zshrc ~/.zshrc
+ln -sfn ~/dotfiles/starship.toml ~/.config/starship.toml
+ln -sfn ~/dotfiles/ghostty ~/.config/ghostty
+ln -sfn ~/dotfiles/.vimrc ~/.vimrc
+
+# Zed uses separate links for better sync behavior.
+ln -sfn ~/dotfiles/zed/themes ~/.config/zed/themes
+ln -sfn ~/dotfiles/zed/settings.json ~/.config/zed/settings.json
+ln -sfn ~/dotfiles/zed/keymap.json ~/.config/zed/keymap.json
+```
+
+7. Reload zsh.
+
+```zsh
+source ~/.zshrc
+```
+
+If zsh completions behave strangely after changing plugins, rebuild the completion cache.
+
+```zsh
+rm -f ~/.zcompdump*
+exec zsh
+```
+
+## Shell Notes
+
+The current zsh setup expects Homebrew on Apple Silicon:
+
+```zsh
+export PATH="/opt/homebrew/bin:$PATH"
+```
+
+oh-my-zsh loads these built-in plugins:
+
+```zsh
+plugins=(git brew)
+```
+
+`zsh-syntax-highlighting` is installed by Homebrew and sourced directly after oh-my-zsh. Starship is initialized last.
+
+## Updating the Brewfile
+
+After installing or removing Homebrew packages, regenerate the Brewfile from this repository:
+
+```zsh
+brew bundle dump --file ~/dotfiles/Brewfile --describe --force
+```
+
+To install from the repository directory instead:
+
+```zsh
+cd ~/dotfiles
+brew bundle
 ```

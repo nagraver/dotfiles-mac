@@ -36,6 +36,8 @@
             "cmd-7": ["workspace::ActivatePane", 6],
             "cmd-8": ["workspace::ActivatePane", 7],
             "cmd-9": ["workspace::ActivatePane", 8],
+            // "cmd-r": "workspace::ToggleRightDock",
+            // Перебиндить шорткат для агент панелей и для закрытия вкладок (cmd alt t)
         },
         "bindings": {
             "ctrl-1": ["workspace::ActivatePane", 0],
@@ -47,6 +49,7 @@
             "ctrl-7": ["workspace::ActivatePane", 6],
             "ctrl-8": ["workspace::ActivatePane", 7],
             "ctrl-9": ["workspace::ActivatePane", 8],
+            // "cmd-r": "terminal_panel::ToggleFocus",
         },
     },
 ]

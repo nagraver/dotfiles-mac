@@ -1,4 +1,4 @@
-theme = catppuccin-mocha.conf
+theme = Catppuccin Mocha
 font-family = "Hack Nerd Fonts"
 font-size = 18
 clipboard-paste-protection = false
@@ -8,3 +8,6 @@ window-height = 25
 window-width = 90
 
 shell-integration-features = ssh-env,ssh-terminfo
+
+cursor-style-blink = false
+macos-option-as-alt = true

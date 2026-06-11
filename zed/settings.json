@@ -1,6 +1,20 @@
 {
+    "prettier": {
+        "parser": ""
+    },
+    "cursor_shape": "bar",
+    "outline_panel": {
+        "dock": "left",
+    },
+    "collaboration_panel": {
+        "dock": "left",
+    },
+    "git_panel": {
+        "dock": "left",
+    },
     "cursor_blink": false,
     "project_panel": {
+        "dock": "left",
         "auto_fold_dirs": false,
         "auto_reveal_entries": true,
         "indent_size": 20.0,
@@ -12,15 +26,10 @@
     "agent_servers": {
         "codex-acp": {
             "default_config_options": {
-                "mode": "auto",
-                "model": "gpt-5.4",
-                "reasoning_effort": "high",
+                "mode": "full-access"
             },
-            "favorite_config_option_values": {
-                "model": ["gpt-5.3-codex"],
-            },
-            "type": "registry",
-        },
+            "type": "registry"
+        }
     },
     "use_system_window_tabs": false,
     "show_edit_predictions": true,
@@ -54,10 +63,15 @@
                     "command": "black",
                     "arguments": ["-", "--line-length", "120"],
                 },
+                // "language_server": {
+                //     "name": "ruff",
+                // },
             },
         },
     },
     "agent": {
+        "notify_when_agent_waiting": "never",
+        "sidebar_side": "right",
         "default_profile": "write",
         "dock": "right",
         "default_model": {
@@ -68,14 +82,16 @@
     },
     "ssh_connections": [
         {
-            "host": "labour-ivory",
+            "host": "yelping-brown",
             "args": [],
             "projects": [
                 {
-                    "paths": ["/home/nagraver"],
-                },
-            ],
-        },
+                    "paths": [
+                        "/home/nagraver"
+                    ]
+                }
+            ]
+        }
     ],
     "edit_predictions": {
         "provider": "zed",
