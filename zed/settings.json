@@ -1,6 +1,6 @@
 {
     "prettier": {
-        "parser": ""
+        "parser": "",
     },
     "cursor_shape": "bar",
     "outline_panel": {
@@ -26,10 +26,10 @@
     "agent_servers": {
         "codex-acp": {
             "default_config_options": {
-                "mode": "full-access"
+                "mode": "full-access",
             },
-            "type": "registry"
-        }
+            "type": "registry",
+        },
     },
     "use_system_window_tabs": false,
     "show_edit_predictions": true,
@@ -86,12 +86,19 @@
             "args": [],
             "projects": [
                 {
-                    "paths": [
-                        "/home/nagraver"
-                    ]
-                }
-            ]
-        }
+                    "paths": ["/home/nagraver"],
+                },
+            ],
+        },
+        {
+            "host": "xorek",
+            "args": [],
+            "projects": [
+                {
+                    "paths": ["/home/nagraver"],
+                },
+            ],
+        },
     ],
     "edit_predictions": {
         "provider": "zed",
@@ -119,8 +126,16 @@
         "calt": false, // disable ligatures
     },
     "current_line_highlight": "gutter",
-    "icon_theme": "Catppuccin Mocha",
-    "theme": "One Dark Pro",
+    "icon_theme": {
+        "mode": "dark",
+        "light": "Catppuccin Mocha",
+        "dark": "Catppuccin Mocha",
+    },
+    "theme": {
+        "mode": "dark",
+        "light": "One Light",
+        "dark": "One Dark Pro",
+    },
     "tab_size": 4,
     "ui_font_size": 18,
     "buffer_font_size": 18,

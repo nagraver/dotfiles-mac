@@ -1,5 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh"
-export PATH="/opt/homebrew/bin:$PATH"
+PATH="/opt/homebrew/bin:$PATH"
 
 plugins=(git brew)
 

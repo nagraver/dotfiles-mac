@@ -36,7 +36,7 @@
             "cmd-7": ["workspace::ActivatePane", 6],
             "cmd-8": ["workspace::ActivatePane", 7],
             "cmd-9": ["workspace::ActivatePane", 8],
-            // "cmd-r": "workspace::ToggleRightDock",
+            "cmd-shift-d": "debug_panel::ToggleFocus",
             // Перебиндить шорткат для агент панелей и для закрытия вкладок (cmd alt t)
         },
         "bindings": {
@@ -49,7 +49,65 @@
             "ctrl-7": ["workspace::ActivatePane", 6],
             "ctrl-8": ["workspace::ActivatePane", 7],
             "ctrl-9": ["workspace::ActivatePane", 8],
-            // "cmd-r": "terminal_panel::ToggleFocus",
+            "cmd-shift-j": "terminal_panel::ToggleFocus",
         },
     },
+    {
+        "context": "Editor",
+        "unbind": {
+            "cmd-'": "editor::ToggleSelectedDiffHunks",
+            "cmd-;": "editor::ToggleLineNumbers",
+            "cmd-\"": "editor::ExpandAllDiffHunks",
+            "cmd-k cmd-d": [
+                "editor::SelectNext",
+                {
+                    "replace_newest": true,
+                },
+            ],
+            "cmd-shift-l": "editor::SelectAllMatches",
+        },
+        "bindings": {
+            "cmd-'": "editor::ToggleAllDiffHunks",
+            "cmd-shift-d": "editor::SelectAllMatches",
+        },
+    },
+    {
+        "context": "Editor && mode == full",
+        "unbind": {
+            "cmd-e": "buffer_search::UseSelectionForFind",
+        },
+    },
+    {
+        "context": "Terminal",
+        "unbind": {
+            "cmd-d": "pane::SplitRight",
+        },
+    },
+    {
+        "bindings": {
+            "cmd-`": "workspace::ActivateNextPane",
+            "cmd-~": "workspace::ActivatePreviousPane",
+        },
+    },
+    {
+        "context": "KeymapEditor",
+        "unbind": {
+            "cmd-e": "zed::OpenKeymapFile",
+        },
+        "bindings": {
+            "cmd-k cmd-s": "zed::OpenKeymapFile",
+        },
+    },
+    {
+        "context": "ProjectSearchBar",
+        "unbind": {
+            "cmd-shift-j": "project_search::ToggleFilters"
+        }
+    },
+    {
+        "context": "ProjectSearchView",
+        "unbind": {
+            "cmd-shift-j": "project_search::ToggleFilters"
+        }
+    }
 ]
