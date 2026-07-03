@@ -1,9 +1,9 @@
 {
-    "name": "One Dark Pro",
-    "author": "One Dark Pro: Zed Theme Importer",
+    "name": "One Dark Pro JB",
+    "author": "nagraver",
     "themes": [
         {
-            "name": "One Dark Pro",
+            "name": "One Dark Pro JB",
             "appearance": "dark",
             "style": {
                 "border": "#282C34",

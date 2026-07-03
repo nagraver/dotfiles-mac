@@ -1,7 +1,5 @@
 {
-    "prettier": {
-        "parser": "",
-    },
+    "cli_default_open_behavior": "new_window",
     "cursor_shape": "bar",
     "outline_panel": {
         "dock": "left",
@@ -26,6 +24,8 @@
     "agent_servers": {
         "codex-acp": {
             "default_config_options": {
+                "fast-mode": "off",
+                "reasoning_effort": "high",
                 "mode": "full-access",
             },
             "type": "registry",
@@ -125,6 +125,16 @@
     "buffer_font_features": {
         "calt": false, // disable ligatures
     },
+    "file_types": {
+        "Helm": [
+            "**/templates/**/*.tpl",
+            "**/templates/**/*.yaml",
+            "**/templates/**/*.yml",
+            "**/helmfile.d/**/*.yaml",
+            "**/helmfile.d/**/*.yml",
+            "**/values*.yaml",
+        ],
+    },
     "current_line_highlight": "gutter",
     "icon_theme": {
         "mode": "dark",
@@ -134,7 +144,7 @@
     "theme": {
         "mode": "dark",
         "light": "One Light",
-        "dark": "One Dark Pro",
+        "dark": "One Dark Pro JB",
     },
     "tab_size": 4,
     "ui_font_size": 18,
