@@ -37,7 +37,6 @@
             "cmd-8": ["workspace::ActivatePane", 7],
             "cmd-9": ["workspace::ActivatePane", 8],
             "cmd-shift-d": "debug_panel::ToggleFocus",
-            // Перебиндить шорткат для агент панелей и для закрытия вкладок (cmd alt t)
         },
         "bindings": {
             "ctrl-1": ["workspace::ActivatePane", 0],
@@ -108,6 +107,30 @@
         "context": "ProjectSearchView",
         "unbind": {
             "cmd-shift-j": "project_search::ToggleFilters"
+        }
+    },
+    {
+        "context": "Pane",
+        "unbind": {
+            "cmd-shift-g": "search::SelectPreviousMatch"
+        }
+    },
+    {
+        "context": "AcpThread",
+        "unbind": {
+            "cmd-shift-g": "agent::SelectPreviousThreadMatch"
+        }
+    },
+    {
+        "context": "Workspace",
+        "bindings": {
+            "cmd-shift-g": "git_panel::ToggleFocus"
+        }
+    },
+    {
+        "context": "Workspace",
+        "unbind": {
+            "ctrl-shift-g": "git_panel::ToggleFocus"
         }
     }
 ]

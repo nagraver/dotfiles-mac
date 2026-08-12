@@ -1,4 +1,5 @@
 {
+    "diff_view_style": "split",
     "cli_default_open_behavior": "new_window",
     "cursor_shape": "bar",
     "outline_panel": {
@@ -35,28 +36,6 @@
     "show_edit_predictions": true,
     "format_on_save": "on",
     "languages": {
-        "C++": {
-            "formatter": {
-                "external": {
-                    "command": "clang-format",
-                    "arguments": [
-                        "--style=file:/Users/nagraver/.clang-format",
-                        "--assume-filename={buffer_path}",
-                    ],
-                },
-            },
-        },
-        "C": {
-            "formatter": {
-                "external": {
-                    "command": "clang-format",
-                    "arguments": [
-                        "--style=file:/Users/nagraver/Documents/.clang-format",
-                        "--assume-filename={buffer_path}",
-                    ],
-                },
-            },
-        },
         "Python": {
             "formatter": {
                 "external": {
@@ -68,6 +47,16 @@
                 // },
             },
         },
+    },
+    "file_types": {
+        "Helm": [
+            "**/templates/**/*.tpl",
+            "**/templates/**/*.yaml",
+            "**/templates/**/*.yml",
+            "**/helmfile.d/**/*.yaml",
+            "**/helmfile.d/**/*.yml",
+            "**/values*.yaml",
+        ],
     },
     "agent": {
         "notify_when_agent_waiting": "never",
@@ -82,23 +71,16 @@
     },
     "ssh_connections": [
         {
-            "host": "yelping-brown",
-            "args": [],
-            "projects": [
-                {
-                    "paths": ["/home/nagraver"],
-                },
-            ],
-        },
-        {
             "host": "xorek",
             "args": [],
             "projects": [
                 {
-                    "paths": ["/home/nagraver"],
-                },
-            ],
-        },
+                    "paths": [
+                        "/home/nagraver"
+                    ]
+                }
+            ]
+        }
     ],
     "edit_predictions": {
         "provider": "zed",
@@ -124,16 +106,6 @@
     },
     "buffer_font_features": {
         "calt": false, // disable ligatures
-    },
-    "file_types": {
-        "Helm": [
-            "**/templates/**/*.tpl",
-            "**/templates/**/*.yaml",
-            "**/templates/**/*.yml",
-            "**/helmfile.d/**/*.yaml",
-            "**/helmfile.d/**/*.yml",
-            "**/values*.yaml",
-        ],
     },
     "current_line_highlight": "gutter",
     "icon_theme": {
