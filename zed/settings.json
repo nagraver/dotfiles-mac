@@ -25,7 +25,7 @@
     "agent_servers": {
         "codex-acp": {
             "default_config_options": {
-                "fast-mode": "off",
+                "fast-mode": false,
                 "reasoning_effort": "high",
                 "mode": "full-access",
             },
@@ -75,12 +75,10 @@
             "args": [],
             "projects": [
                 {
-                    "paths": [
-                        "/home/nagraver"
-                    ]
-                }
-            ]
-        }
+                    "paths": ["/home/nagraver"],
+                },
+            ],
+        },
     ],
     "edit_predictions": {
         "provider": "zed",
@@ -111,12 +109,12 @@
     "icon_theme": {
         "mode": "dark",
         "light": "Catppuccin Mocha",
-        "dark": "Catppuccin Mocha",
+        "dark": "Zed (Default)",
     },
     "theme": {
         "mode": "dark",
         "light": "One Light",
-        "dark": "One Dark Pro JB",
+        "dark": "nagraver-one-dark",
     },
     "tab_size": 4,
     "ui_font_size": 18,
