@@ -1,6 +1,6 @@
 # Dotfiles
 
-Personal macOS dotfiles for zsh, Starship, Ghostty, Zed, Vim, and Homebrew.
+Personal macOS dotfiles for zsh, Starship, Ghostty, Zed, Hammerspoon, Vim, and Homebrew.
 
 ## What's Included
 
@@ -9,6 +9,7 @@ Personal macOS dotfiles for zsh, Starship, Ghostty, Zed, Vim, and Homebrew.
 - `Brewfile` - Homebrew packages and GUI apps used on a new Mac.
 - `ghostty/` - Ghostty terminal config and themes.
 - `zed/` - Zed settings, keymap, and custom themes.
+- `hammerspoon/` - global application launch hotkeys.
 - `.vimrc` - Vim config.
 
 ## Bootstrap a New Mac
@@ -48,11 +49,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 Back up or remove existing files first if these paths already exist.
 
 ```zsh
-mkdir -p ~/.config ~/.config/zed
+mkdir -p ~/.config ~/.config/zed ~/.hammerspoon
 
 ln -sfn ~/dotfiles/.zshrc ~/.zshrc
 ln -sfn ~/dotfiles/starship.toml ~/.config/starship.toml
 ln -sfn ~/dotfiles/ghostty ~/.config/ghostty
+ln -sfn ~/dotfiles/hammerspoon/init.lua ~/.hammerspoon/init.lua
 ln -sfn ~/dotfiles/.vimrc ~/.vimrc
 
 # Zed uses separate links for better sync behavior.
@@ -73,6 +75,20 @@ If zsh completions behave strangely after changing plugins, rebuild the completi
 rm -f ~/.zcompdump*
 exec zsh
 ```
+
+## Application Hotkeys
+
+Hammerspoon loads its configuration from the linked `~/.hammerspoon/init.lua` file and gives these global shortcuts priority over shortcuts in the active application:
+
+| Shortcut | Application |
+| --- | --- |
+| `Option-G` | Ghostty |
+| `Option-S` | System Settings |
+| `Option-T` | Telegram |
+| `Option-V` | v2RayTun |
+| `Option-Z` | Zed |
+
+On a new Mac, launch Hammerspoon once, grant it Accessibility access in **System Settings → Privacy & Security → Accessibility**, then choose **Reload Config** from its menu bar icon.
 
 ## Shell Notes
 

@@ -100,37 +100,37 @@
     {
         "context": "ProjectSearchBar",
         "unbind": {
-            "cmd-shift-j": "project_search::ToggleFilters"
-        }
+            "cmd-shift-j": "project_search::ToggleFilters",
+        },
     },
     {
         "context": "ProjectSearchView",
         "unbind": {
-            "cmd-shift-j": "project_search::ToggleFilters"
-        }
+            "cmd-shift-j": "project_search::ToggleFilters",
+        },
     },
     {
         "context": "Pane",
         "unbind": {
-            "cmd-shift-g": "search::SelectPreviousMatch"
-        }
+            "cmd-shift-g": "search::SelectPreviousMatch",
+        },
     },
     {
         "context": "AcpThread",
         "unbind": {
-            "cmd-shift-g": "agent::SelectPreviousThreadMatch"
-        }
+            "cmd-shift-g": "agent::SelectPreviousThreadMatch",
+        },
     },
     {
         "context": "Workspace",
         "bindings": {
-            "cmd-shift-g": "git_panel::ToggleFocus"
-        }
+            "cmd-shift-g": "git_panel::ToggleFocus",
+        },
     },
     {
         "context": "Workspace",
         "unbind": {
-            "ctrl-shift-g": "git_panel::ToggleFocus"
-        }
-    }
+            "ctrl-shift-g": "git_panel::ToggleFocus",
+        },
+    },
 ]
