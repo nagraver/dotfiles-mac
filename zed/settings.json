@@ -75,14 +75,27 @@
     },
     "ssh_connections": [
         {
-            "host": "xorek",
+            "host": "fi-xorek",
             "args": [],
             "projects": [
                 {
-                    "paths": ["/home/nagraver"],
-                },
-            ],
+                    "paths": [
+                        "/home/nagraver"
+                    ]
+                }
+            ]
         },
+        {
+            "host": "de-xorek",
+            "args": [],
+            "projects": [
+                {
+                    "paths": [
+                        "/home/nagraver"
+                    ]
+                }
+            ]
+        }
     ],
     "edit_predictions": {
         "provider": "zed",

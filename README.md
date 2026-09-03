@@ -82,11 +82,11 @@ Hammerspoon loads its configuration from the linked `~/.hammerspoon/init.lua` fi
 
 | Shortcut | Application |
 | --- | --- |
-| `Option-G` | Ghostty |
-| `Option-S` | System Settings |
-| `Option-T` | Telegram |
-| `Option-V` | v2RayTun |
-| `Option-Z` | Zed |
+| ` Option-G ` | Ghostty |
+| ` Option-S ` | System Settings |
+| ` Option-T ` | Telegram |
+| ` Option-V ` | v2RayTun |
+| ` Option-Z ` | Zed |
 
 On a new Mac, launch Hammerspoon once, grant it Accessibility access in **System Settings → Privacy & Security → Accessibility**, then choose **Reload Config** from its menu bar icon.
 

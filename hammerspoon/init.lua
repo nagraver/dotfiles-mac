@@ -4,6 +4,8 @@ local appHotkeys = {
     t = "Telegram",
     v = "v2RayTun",
     z = "Zed",
+    b = "Safari",
+    h = "Hammerspoon"
 }
 
 for key, appName in pairs(appHotkeys) do
