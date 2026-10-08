@@ -76,6 +76,14 @@ rm -f ~/.zcompdump*
 exec zsh
 ```
 
+## Ghostty Theme
+
+Ghostty uses the custom `One Dark OpenIDE` theme in `ghostty/themes/One Dark OpenIDE`, adapted from the standard [JetBrains One Dark 6.2.5 palette](https://github.com/one-dark/jetbrains-one-dark-theme/tree/1bd06dbd827bd78c97b9662c19e5c1fd64469ec9/src/main/resources).
+
+The theme uses the editor background (`#282C34`), text (`#ABB2BF`), caret (`#528BFF`), and selection background (`#404859`). ANSI colors follow the source console palette; bright chromatic colors retain the same hue. Bright white and selected text use the UI selection foreground (`#D7DAE0`), and text under the cursor uses the editor background for contrast.
+
+The existing `~/.config/ghostty` symlink also exposes the `themes/` directory. After changing the theme, use Ghostty's **Reload Configuration** action or restart Ghostty.
+
 ## Application Hotkeys
 
 Hammerspoon loads its configuration from the linked `~/.hammerspoon/init.lua` file and gives these global shortcuts priority over shortcuts in the active application:

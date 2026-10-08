@@ -21,7 +21,6 @@
         "auto_fold_dirs": false,
         "auto_reveal_entries": true,
         "indent_size": 20.0,
-        "folder_icons": true,
         "file_icons": true,
         "entry_spacing": "comfortable",
     },
@@ -130,7 +129,7 @@
     },
     "theme": {
         "mode": "dark",
-        "light": "One Light",
+        "light": "nagraver-one-dark",
         "dark": "nagraver-one-dark",
     },
     "tab_size": 4,

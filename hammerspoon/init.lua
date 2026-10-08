@@ -2,10 +2,11 @@ local appHotkeys = {
     g = "Ghostty",
     s = "System Settings",
     t = "Telegram",
-    v = "v2RayTun",
+    v = "INCY",
     z = "Zed",
-    b = "Safari",
-    h = "Hammerspoon"
+    h = "Hammerspoon",
+    -- b = "Safari",
+    -- f = "Finder"
 }
 
 for key, appName in pairs(appHotkeys) do

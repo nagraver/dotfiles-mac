@@ -83,12 +83,6 @@
         },
     },
     {
-        "bindings": {
-            "cmd-`": "workspace::ActivateNextPane",
-            "cmd-~": "workspace::ActivatePreviousPane",
-        },
-    },
-    {
         "context": "KeymapEditor",
         "unbind": {
             "cmd-e": "zed::OpenKeymapFile",
@@ -133,4 +127,62 @@
             "ctrl-shift-g": "git_panel::ToggleFocus",
         },
     },
+    {
+        "context": "ImageViewer",
+        "bindings": {
+            "cmd-k cmd-r": "editor::RevealInFileManager"
+        }
+    },
+    {
+        "context": "ImageViewer",
+        "unbind": {
+            "cmd-k r": "editor::RevealInFileManager"
+        }
+    },
+    {
+        "context": "Editor",
+        "bindings": {
+            "cmd-k cmd-r": "editor::RevealInFileManager"
+        }
+    },
+    {
+        "context": "Editor",
+        "unbind": {
+            "cmd-k r": "editor::RevealInFileManager"
+        }
+    },
+    {
+        "context": "ProjectPanel",
+        "bindings": {
+            "cmd-k cmd-r": "project_panel::RevealInFileManager"
+        }
+    },
+    {
+        "context": "ProjectPanel",
+        "unbind": {
+            "alt-cmd-r": "project_panel::RevealInFileManager"
+        }
+    },
+    {
+        "context": "OutlinePanel && not_editing",
+        "bindings": {
+            "cmd-k cmd-r": "outline_panel::RevealInFileManager"
+        }
+    },
+    {
+        "context": "OutlinePanel && not_editing",
+        "unbind": {
+            "alt-cmd-r": "outline_panel::RevealInFileManager"
+        }
+    },
+    {
+        "bindings": {
+            "cmd-`": "workspace::ActivateNextWindow"
+        }
+    },
+    {
+        "bindings": {
+            "cmd-~": "workspace::ActivatePreviousWindow"
+        }
+    }
 ]

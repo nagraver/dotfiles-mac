@@ -1,0 +1,32 @@
+# One Dark OpenIDE — adapted from JetBrains One Dark 6.2.5 (standard).
+# Source: https://github.com/one-dark/jetbrains-one-dark-theme/tree/1bd06dbd827bd78c97b9662c19e5c1fd64469ec9/src/main/resources
+# Editor colors and CONSOLE_* ANSI colors come from one_dark.xml.
+# Bright chromatic colors intentionally match their normal counterparts.
+# Bright white and selection text use the UI selection foreground.
+
+background = #282C34
+foreground = #ABB2BF
+cursor-color = #528BFF
+cursor-text = #282C34
+selection-background = #404859
+selection-foreground = #D7DAE0
+
+# Normal ANSI colors: black, red, green, yellow, blue, magenta, cyan, white.
+palette = 0=#000000
+palette = 1=#E06C75
+palette = 2=#98C379
+palette = 3=#E5C07B
+palette = 4=#61AFEF
+palette = 5=#C678DD
+palette = 6=#56B6C2
+palette = 7=#ABB2BF
+
+# Bright ANSI colors.
+palette = 8=#464C55
+palette = 9=#E06C75
+palette = 10=#98C379
+palette = 11=#E5C07B
+palette = 12=#61AFEF
+palette = 13=#C678DD
+palette = 14=#56B6C2
+palette = 15=#D7DAE0

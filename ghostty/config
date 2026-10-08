@@ -1,11 +1,8 @@
-theme = Catppuccin Mocha
+theme = Dracula
 font-family = "Hack Nerd Fonts"
 font-size = 18
 clipboard-paste-protection = false
 shell-integration-features = sudo
-
-window-height = 25
-window-width = 90
 
 shell-integration-features = ssh-env,ssh-terminfo
 
